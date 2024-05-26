@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          <div className='bg-red-700 border border-black text-red-950'>me hun ayush malviya</div>
         </a>
       </header>
     </div>
