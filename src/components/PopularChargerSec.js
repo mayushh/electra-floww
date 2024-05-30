@@ -1,12 +1,16 @@
 import React, { useEffect, useRef } from 'react';
 
-const PopularChargerSec = () => {
+
+
+const PopularChargerSec = (props) => {
     
     
   return (
-    
+
+
     <div className="popular section my-20 mx-10" id="popular">
     <div className="container px-20">
+
         <h2 className="section__subtitle text-start text-2xl text-green-900 font-semibold">Best Choice</h2>
         <h2 className="section__title text-start text-5xl font-semibold">
             Popular Chargers<span>.</span>
@@ -14,90 +18,22 @@ const PopularChargerSec = () => {
 
         <div className=" swiper">
             <div className=" popularContain flex justify-around overflow-x-scroll ">
+
+
+              {props.details.map((value, index)=>(
+                
                 <article className=" popular__card p-2 p-5 min-w-72">
-                    <img src="https://i.pinimg.com/736x/aa/f3/2c/aaf32c22fcca7dfc71add1597c677bd5.jpg" alt="" className="popular__img rounded-xl h-auto" />
-                    <div className="cardData">
-                        <h2 className="popular__price"><span>$</span>66</h2>
-                        <h3 className="popular__title">EV Charger</h3>
+                    <img src={value.image} alt="" className="popular__img rounded-xl h-auto" />
+                    <div className="cardData" key={index}>
+                        <h2 className="popular__price">{value.price}</h2>
+                        <h3 className="popular__title">{value.chargertype}</h3>
                         <p className="popular__description">
-                            Developing smart, safe & robust EV Charging Network for all category of EV & Charging Protocols.
+                            {value.description}
                         </p>
                     </div>
                 </article>
-                <article className=" popular__card p-2 p-5 min-w-72">
-                    <img src="https://i.pinimg.com/736x/aa/f3/2c/aaf32c22fcca7dfc71add1597c677bd5.jpg" alt="" className="popular__img rounded-xl h-auto" />
-                    <div className="cardData">
-                        <h2 className="popular__price"><span>$</span>68</h2>
-                        <h3 className="popular__title">EV Chargers</h3>
-                        <p className="popular__description">
-                            Developing smart, safe & robust EV Charging Network for all category of EV & Charging Protocols.
-                        </p>
-                    </div>
-                </article>
-                <article className="  popular__card p-2 p-5 min-w-72">
-                    <img src="https://i.pinimg.com/736x/aa/f3/2c/aaf32c22fcca7dfc71add1597c677bd5.jpg" alt="" className="popular__img rounded-xl h-auto" />
-                    <div className="cardData">
-                        <h2 className="popular__price"><span>$</span>69</h2>
-                        <h3 className="popular__title">EV Chargers</h3>
-                        <p className="popular__description">
-                            Developing smart, safe & robust EV Charging Network for all category of EV & Charging Protocols.
-                        </p>
-                    </div>
-                </article>
-                <article className=" popular__card p-2 p-5 min-w-72">
-                    <img src="https://i.pinimg.com/736x/aa/f3/2c/aaf32c22fcca7dfc71add1597c677bd5.jpg" alt="" className="popular__img rounded-xl h-auto" />
-                    <div className="cardData">
-                        <h2 className="popular__price"><span>$</span>69</h2>
-                        <h3 className="popular__title">EV Chargers</h3>
-                        <p className="popular__description">
-                            Developing smart, safe & robust EV Charging Network for all category of EV & Charging Protocols.
-                        </p>
-                    </div>
-                </article>
-                <article className="   popular__card p-2 p-5 min-w-72">
-                    <img src="https://i.pinimg.com/736x/aa/f3/2c/aaf32c22fcca7dfc71add1597c677bd5.jpg" alt="" className="popular__img rounded-xl h-auto" />
-                    <div className="cardData">
-                        <h2 className="popular__price"><span>$</span>69</h2>
-                        <h3 className="popular__title">EV Chargers</h3>
-                        <p className="popular__description">
-                            Developing smart, safe & robust EV Charging Network for all category of EV & Charging Protocols.
-                        </p>
-                    </div>
-                </article>
-                <article className=" popular__card p-2 p-5 min-w-72">
-                    <img src="https://i.pinimg.com/736x/aa/f3/2c/aaf32c22fcca7dfc71add1597c677bd5.jpg" alt="" className="popular__img rounded-xl h-auto" />
-                    <div className="cardData">
-                        <h2 className="popular__price"><span>$</span>69</h2>
-                        <h3 className="popular__title">EV Chargers</h3>
-                        <p className="popular__description">
-                            Developing smart, safe & robust EV Charging Network for all category of EV & Charging Protocols.
-                        </p>
-                    </div>
-                </article>
-                <article className=" popular__card p-2 p-5 min-w-72">
-                    <img src="https://i.pinimg.com/736x/aa/f3/2c/aaf32c22fcca7dfc71add1597c677bd5.jpg" alt="" className="popular__img rounded-xl h-auto" />
-                    <div className="cardData">
-                        <h2 className="popular__price"><span>$</span>69</h2>
-                        <h3 className="popular__title">EV Chargers</h3>
-                        <p className="popular__description">
-                            Developing smart, safe & robust EV Charging Network for all category of EV & Charging Protocols.
-                        </p>
-                    </div>
-                </article>
-                <article className=" popular__card p-2 p-5 min-w-72">
-                    <img src="https://i.pinimg.com/736x/aa/f3/2c/aaf32c22fcca7dfc71add1597c677bd5.jpg" alt="" className="popular__img rounded-xl h-auto" />
-                    <div className="cardData">
-                        <h2 className="popular__price"><span>$</span>90</h2>
-                        <h3 className="popular__title">EV Chargers</h3>
-                        <p className="popular__description">
-                            Developing smart, safe & robust EV Charging Network for all category of EV & Charging Protocols.
-                        </p>
-                    </div>
-                </article>
-            </div>
-            <div className='flex'>
-                <div className="swiper-button-next"><i className='bx bx-chevron-right'></i></div>
-                <div className="swiper-button-prev"><i className='bx bx-chevron-left'></i></div>
+                ))}
+                
             </div>
         </div>
     </div>
