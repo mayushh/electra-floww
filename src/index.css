@@ -95,7 +95,7 @@
 
 .popular__card {
     position: relative;
-    background-color: #fff;
+    background-color: rgb(241, 255, 224);
     border-radius: 1rem;
     overflow: hidden;
     margin: 0.5rem;
@@ -106,12 +106,6 @@
 .popular__card:hover {
     transform: translateY(-0.5rem);
 }
-
-.popular__img {
-    width: 100%;
-    height: auto;
-}
-
 .popular__data {
     padding: 1.25rem;
 }
@@ -193,4 +187,3 @@
     width: 100%;
     height: auto;
 }
-
